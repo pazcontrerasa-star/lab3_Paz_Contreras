@@ -96,3 +96,9 @@ hashmap.c:52:21: error: expected expression before ‘=’ token
    52 |     mapa->buckets * = (Pair*)malloc(sizeof(Pair));
       |                     ^
 d85ee5c
+Thu Apr 16 08:29:00 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|6
+total_score: 5/60
+2b2fc29
