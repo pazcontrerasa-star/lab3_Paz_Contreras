@@ -71,3 +71,13 @@ hashmap.c:60:1: error: control reaches end of non-void function [-Werror=return-
       | ^
 cc1: all warnings being treated as errors
 bdac959
+Thu Apr 16 08:26:39 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:52:19: error: assignment to ‘Pair **’ from incompatible pointer type ‘Pair *’ [-Wincompatible-pointer-types]
+   52 |     mapa->buckets = (Pair*)malloc(sizeof(Pair));
+      |                   ^
+398a437
