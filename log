@@ -86,3 +86,13 @@ Thu Apr 16 08:27:13 PM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 db58a70
+Thu Apr 16 08:28:09 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:52:21: error: expected expression before ‘=’ token
+   52 |     mapa->buckets * = (Pair*)malloc(sizeof(Pair));
+      |                     ^
+d85ee5c
