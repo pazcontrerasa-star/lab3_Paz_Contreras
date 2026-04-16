@@ -39,3 +39,35 @@ hashmap.c:60:1: error: control reaches end of non-void function [-Werror=return-
       | ^
 cc1: all warnings being treated as errors
 7c13f3e
+Thu Apr 16 08:25:57 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:48:20: error: invalid initializer
+   48 |     HashMap mapa = (HashMap*) malloc(sizeof(HashMap));
+      |                    ^
+hashmap.c:49:12: error: invalid operands to binary == (have ‘HashMap’ {aka ‘struct HashMap’} and ‘void *’)
+   49 |     if(mapa==NULL){
+      |            ^~
+hashmap.c:52:9: error: invalid type argument of ‘->’ (have ‘HashMap’ {aka ‘struct HashMap’})
+   52 |     mapa->buckets = (Pair*)malloc(sizeof(Pair));
+      |         ^~
+hashmap.c:53:9: error: invalid type argument of ‘->’ (have ‘HashMap’ {aka ‘struct HashMap’})
+   53 |     mapa->capacity = capacity;
+      |         ^~
+hashmap.c:54:9: error: invalid type argument of ‘->’ (have ‘HashMap’ {aka ‘struct HashMap’})
+   54 |     mapa->current = -1;
+      |         ^~
+hashmap.c:57:13: error: invalid type argument of ‘->’ (have ‘HashMap’ {aka ‘struct HashMap’})
+   57 |         mapa->buckets[i] = NULL;
+      |             ^~
+hashmap.c:59:12: error: incompatible types when returning type ‘HashMap’ {aka ‘struct HashMap’} but ‘HashMap *’ {aka ‘struct HashMap *’} was expected
+   59 |     return mapa;
+      |            ^~~~
+hashmap.c:60:1: error: control reaches end of non-void function [-Werror=return-type]
+   60 | }
+      | ^
+cc1: all warnings being treated as errors
+bdac959
