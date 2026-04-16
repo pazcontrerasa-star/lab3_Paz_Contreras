@@ -106,3 +106,24 @@ Thu Apr 16 08:34:40 PM UTC 2026:
  tests:  1|6
 total_score: 5/60
 0e3d404
+Thu Apr 16 08:44:07 PM UTC 2026: 
+ hashmap.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:72:16: error: implicit declaration of function ‘Hash’; did you mean ‘hash’? [-Wimplicit-function-declaration]
+   72 |     long pos = Hash(key);
+      |                ^~~~
+      |                hash
+hashmap.c:74:15: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘key’
+   74 |         if(map->key != key){
+      |               ^~
+hashmap.c:76:9: error: expected expression before ‘}’ token
+   76 |         }
+      |         ^
+hashmap.c:72:10: error: variable ‘pos’ set but not used [-Werror=unused-but-set-variable]
+   72 |     long pos = Hash(key);
+      |          ^~~
+cc1: all warnings being treated as errors
+e527f99
