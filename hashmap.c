@@ -103,7 +103,10 @@ Pair * searchMap(HashMap * map,  char * key){
 // Recuerde actualizar la variable size.
 
 void eraseMap(HashMap * map,  char * key) {    
-
+    Pair dato = searchMap(map, key);
+    if(dato == NULL) return;
+    map->buckets[key] = NULL;
+    map->size = map->size--;
 
 }
 

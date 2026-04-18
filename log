@@ -230,3 +230,23 @@ Sat Apr 18 09:43:03 PM UTC 2026:
  tests:  8|3
 total_score: 30/60
 29edd08
+Sat Apr 18 09:52:38 PM UTC 2026: 
+ hashmap.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:106:17: error: invalid initializer
+  106 |     Pair dato = searchMap(map, key);
+      |                 ^~~~~~~~~
+hashmap.c:107:13: error: invalid operands to binary == (have ‘Pair’ and ‘void *’)
+  107 |     if(dato == NULL) return;
+      |             ^~
+hashmap.c:108:17: error: array subscript is not an integer
+  108 |     map->buckets[key] = NULL;
+      |                 ^
+hashmap.c:109:15: error: operation on ‘map->size’ may be undefined [-Werror=sequence-point]
+  109 |     map->size = map->size--;
+      |     ~~~~~~~~~~^~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+3acb6e8
