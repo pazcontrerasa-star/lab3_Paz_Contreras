@@ -87,10 +87,11 @@ void insertMap(HashMap * map, char * key, void * value) {
 
 Pair * searchMap(HashMap * map,  char * key){
     long indice = hash(key, map->capacity);
-    while(map->buckets[indice] != NULL && map->buckets->key != key){
+    while(map->buckets[indice] != NULL && strcmp(map->buckets[indice]->key , key) != 0){
         indice = (indice+1)%map->capacity;
     }
     if(map->buckets[indice]== NULL) return NULL;
+    map->current = indice;
     return map->buckets[indice];
 }
 
