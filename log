@@ -264,3 +264,15 @@ hashmap.c:111:15: error: operation on ‘map->size’ may be undefined [-Werror=
       |     ~~~~~~~~~~^~~~~~~~~~~~~
 cc1: all warnings being treated as errors
 d3fae83
+Sat Apr 18 09:59:27 PM UTC 2026: 
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:110:17: error: array subscript is not an integer
+  110 |     map->buckets[key] = NULL;
+      |                 ^
+hashmap.c:111:15: error: operation on ‘map->size’ may be undefined [-Werror=sequence-point]
+  111 |     map->size = map->size--;
+      |     ~~~~~~~~~~^~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+21ea6dd
