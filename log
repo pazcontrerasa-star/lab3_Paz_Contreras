@@ -127,3 +127,22 @@ hashmap.c:72:10: error: variable ‘pos’ set but not used [-Werror=unused-but-
       |          ^~~
 cc1: all warnings being treated as errors
 e527f99
+Sat Apr 18 02:29:55 AM UTC 2026: 
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:72:16: error: implicit declaration of function ‘Hash’; did you mean ‘hash’? [-Wimplicit-function-declaration]
+   72 |     long pos = Hash(key);
+      |                ^~~~
+      |                hash
+hashmap.c:74:15: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘key’
+   74 |         if(map->key != key){
+      |               ^~
+hashmap.c:76:9: error: expected expression before ‘}’ token
+   76 |         }
+      |         ^
+hashmap.c:72:10: error: variable ‘pos’ set but not used [-Werror=unused-but-set-variable]
+   72 |     long pos = Hash(key);
+      |          ^~~
+cc1: all warnings being treated as errors
+b7d1853
