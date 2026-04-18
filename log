@@ -213,3 +213,14 @@ hashmap.c:94:32: error: expected ‘;’ before ‘}’ token
    95 | }
       | ~                               
 a391162
+Sat Apr 18 09:39:05 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:90:55: error: ‘map->buckets’ is a pointer to pointer; did you mean to dereference it before applying ‘->’ to it?
+   90 |     while(map->buckets[indice] != NULL && map->buckets->key != key){
+      |                                                       ^~
+      |                                           (*          )
+f20dab5
