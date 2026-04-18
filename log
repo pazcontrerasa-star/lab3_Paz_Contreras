@@ -276,3 +276,13 @@ hashmap.c:111:15: error: operation on ‘map->size’ may be undefined [-Werror=
       |     ~~~~~~~~~~^~~~~~~~~~~~~
 cc1: all warnings being treated as errors
 21ea6dd
+Sat Apr 18 10:02:28 PM UTC 2026: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:110:8: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘key’
+  110 |     map->key = NULL;
+      |        ^~
+95f3198
