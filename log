@@ -146,3 +146,18 @@ hashmap.c:72:10: error: variable ‘pos’ set but not used [-Werror=unused-but-
       |          ^~~
 cc1: all warnings being treated as errors
 b7d1853
+Sat Apr 18 03:38:21 AM UTC 2026: 
+ hashmap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:73:16: error: implicit declaration of function ‘Hash’; did you mean ‘hash’? [-Wimplicit-function-declaration]
+   73 |     long pos = Hash(key);
+      |                ^~~~
+      |                hash
+hashmap.c:72:10: error: unused variable ‘largo’ [-Werror=unused-variable]
+   72 |     long largo = map->capacity;
+      |          ^~~~~
+cc1: all warnings being treated as errors
+d3ca16b
