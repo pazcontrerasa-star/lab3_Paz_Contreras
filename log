@@ -286,3 +286,11 @@ hashmap.c:110:8: error: ‘HashMap’ {aka ‘struct HashMap’} has no member n
   110 |     map->key = NULL;
       |        ^~
 95f3198
+Sun Apr 19 09:48:56 PM UTC 2026: 
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:110:8: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘key’
+  110 |     map->key = NULL;
+      |        ^~
+5f69b38
