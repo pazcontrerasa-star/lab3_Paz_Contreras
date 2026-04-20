@@ -365,3 +365,34 @@ Mon Apr 20 02:52:06 AM UTC 2026:
  tests:  16|1
 total_score: 50/60
 bab3076
+Mon Apr 20 03:30:25 AM UTC 2026: 
+ hashmap.c | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:153:26: error: initialization of ‘Pair *’ from incompatible pointer type ‘Pair **’ [-Wincompatible-pointer-types]
+  153 |     Pair * old_buckets = map->buckets;
+      |                          ^~~
+hashmap.c:156:21: error: ‘map_capacity’ undeclared (first use in this function)
+  156 |     map->capacity = map_capacity * 2;
+      |                     ^~~~~~~~~~~~
+hashmap.c:156:21: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:158:59: error: expected expression before ‘Pair’
+  158 |     map->buckets = (Pair**) malloc(map->capacity * sizeof Pair*);
+      |                                                           ^~~~
+hashmap.c:166:26: error: invalid operands to binary != (have ‘Pair’ and ‘void *’)
+  166 |         if(old_buckets[i]!= NULL && old_buckets[i]->key != NULL){
+      |            ~~~~~~~~~~~~~~^~
+      |                       |
+      |                       Pair
+hashmap.c:166:51: error: invalid type argument of ‘->’ (have ‘Pair’)
+  166 |         if(old_buckets[i]!= NULL && old_buckets[i]->key != NULL){
+      |                                                   ^~
+hashmap.c:167:42: error: invalid type argument of ‘->’ (have ‘Pair’)
+  167 |             insertMap(map, old_buckets[i]->key, old_buckets[i]->value);
+      |                                          ^~
+hashmap.c:167:63: error: invalid type argument of ‘->’ (have ‘Pair’)
+  167 |             insertMap(map, old_buckets[i]->key, old_buckets[i]->value);
+      |                                                               ^~
+465d959

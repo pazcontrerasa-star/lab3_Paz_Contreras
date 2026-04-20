@@ -150,8 +150,24 @@ Pair * nextMap(HashMap * map) {
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
+    Pair * old_buckets = map->buckets;
+    long capacidad_anterior = map->capacity;
 
+    map->capacity = map_capacity * 2;
+    
+    map->buckets = (Pair**) malloc(map->capacity * sizeof Pair*);
 
+    for(long i = 0; i < map->capacity; i++){
+        map->buckets[i]= NULL;
+    }
+    map->size = 0;
+
+    for(long i = 0; i < capacidad_anterior; i++){
+        if(old_buckets[i]!= NULL && old_buckets[i]->key != NULL){
+            insertMap(map, old_buckets[i]->key, old_buckets[i]->value);
+        }
+    }
+    free(old_buckets);
 }
 
 
