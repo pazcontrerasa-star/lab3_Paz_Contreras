@@ -396,3 +396,27 @@ hashmap.c:167:63: error: invalid type argument of ‘->’ (have ‘Pair’)
   167 |             insertMap(map, old_buckets[i]->key, old_buckets[i]->value);
       |                                                               ^~
 465d959
+Mon Apr 20 03:36:24 AM UTC 2026: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:158:66: error: expected ‘)’ before ‘;’ token
+  158 |     map->buckets = (Pair**) malloc(map->capacity * sizeof (Pair*);
+      |                                   ~                              ^
+      |                                                                  )
+hashmap.c:170:23: error: expected ‘;’ before ‘}’ token
+  170 |     free(old_buckets);
+      |                       ^
+      |                       ;
+  171 | }
+      | ~                      
+hashmap.c:154:10: error: unused variable ‘capacidad_anterior’ [-Werror=unused-variable]
+  154 |     long capacidad_anterior = map->capacity;
+      |          ^~~~~~~~~~~~~~~~~~
+hashmap.c:153:13: error: unused variable ‘old_buckets’ [-Werror=unused-variable]
+  153 |     Pair ** old_buckets = map->buckets;
+      |             ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+f6e44ff
