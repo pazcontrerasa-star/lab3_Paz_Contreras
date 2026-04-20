@@ -341,3 +341,21 @@ Mon Apr 20 02:48:14 AM UTC 2026:
  tests:  13|2
 total_score: 40/60
 fc77761
+Mon Apr 20 02:51:38 AM UTC 2026: 
+ hashmap.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:131:29: error: expected expression before ‘!=’ token
+  131 |         if(map->buckets[i]) != NULL && map->buckets[i]->key != NULL){
+      |                             ^~
+hashmap.c:131:9: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  131 |         if(map->buckets[i]) != NULL && map->buckets[i]->key != NULL){
+      |         ^~
+hashmap.c:131:68: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  131 |         if(map->buckets[i]) != NULL && map->buckets[i]->key != NULL){
+      |                                                                    ^
+hashmap.c:131:68: error: expected statement before ‘)’ token
+cc1: all warnings being treated as errors
+69534b5
